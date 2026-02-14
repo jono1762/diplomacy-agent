@@ -1,4 +1,4 @@
-# CITS3011 Intelligent Agent Project
+# CITS3011 Intelligent Agents Project
 
 ## Description
 This repository contains the relevant code files that I submitted as part of my CITS3011 (Intelligent Agents) project. I was tasked with developing an AI agent which plays the multiplayer strategy game, Diplomacy. Specifically, the version of the game using the standard map where the time begins in 1901 and ends in 1920. I developed the agent from scratch but was provided additional files for simulating the game, baseline agents and statistically reporting back its performance.
