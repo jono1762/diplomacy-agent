@@ -1,7 +1,7 @@
 # CITS3011 Intelligent Agent Project
 
 ## Description
-This repository contains the relevant code files that I submitted as part of my CITS3011 (Intelligent Agents) project. I was tasked with developing an AI agent which plays the multiplayer strategy game, Diplomacy using the standard map while the time begins in 1901 and ends in 1920. I developed the agent from scratch but was provided supporting infrastructure through code used to simulate the game and test the agent's performance.
+This repository contains the relevant code files that I submitted as part of my CITS3011 (Intelligent Agents) project. I was tasked with developing an AI agent which plays the multiplayer strategy game, Diplomacy. Specifically, the version of the game using the standard map where the time begins in 1901 and ends in 1920. I developed the agent from scratch but was provided additional files for simulating the game, baseline agents and statistically reporting back its performance.
 
 The contents of the code files can be sumarised as follows:
 - `agent_24314826.py`: contains the code that powers the agent, using breadth-first search, heuristics and game specific strategies to optimise performance. More details can be found in a PDF report that I also included in my submission, where I describe the techniques implemented into the agent. You can access it by going to my [LinkedIn](https://www.linkedin.com/in/jonathan-abraham-dev/) and clicking the document attached to my description of this project in the `Projects` section.
