@@ -1,4 +1,6 @@
-# CITS3011 Intelligent Agents Project
+# Diplomacy Agent
+
+An AI agent that plays the strategy board game Diplomacy, built for my CITS3011 (Intelligent Agents) project at UWA.
 
 **Live demo:** watch the agent play at **https://jono1762.github.io/diplomacy-agent/**
 
