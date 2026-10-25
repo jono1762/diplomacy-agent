@@ -1,0 +1,11 @@
+.replays-intro {
+    max-width: 60rem;
+}
+
+.replays td {
+    vertical-align: middle;
+}
+
+.replays .opponents {
+    font-size: 0.85rem;
+}

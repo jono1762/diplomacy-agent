@@ -1,0 +1,101 @@
+--- a/src/gui/pages/page.jsx
++++ b/src/gui/pages/page.jsx
+@@ -17,7 +17,7 @@
+ /** Main class to use to create app GUI. **/
+ 
+ import React from "react";
+-import {ContentConnection} from "./content_connection";
++import {ContentReplays} from "./content_replays";
+ import {UTILS} from "../../diplomacy/utils/utils";
+ import {Diplog} from "../../diplomacy/utils/diplog";
+ import {DipStorage} from "../utils/dipStorage";
+@@ -52,6 +52,7 @@
+         this.success = this.success.bind(this);
+         this.logout = this.logout.bind(this);
+         this.loadGameFromDisk = this.loadGameFromDisk.bind(this);
++        this.loadReplays = this.loadReplays.bind(this);
+         this._post_remove = this._post_remove.bind(this);
+         this._add_to_my_games = this._add_to_my_games.bind(this);
+         this._remove_from_my_games = this._remove_from_my_games.bind(this);
+@@ -70,7 +71,7 @@
+     }
+ 
+     static defaultPage() {
+-        return <ContentConnection/>;
++        return <ContentReplays/>;
+     }
+ 
+     setState(state) {
+@@ -113,6 +114,13 @@
+         return this.setState(newState);
+     }
+ 
++    loadReplays(messages) {
++        const url = new URL(window.location.href);
++        url.searchParams.delete('game');
++        window.history.replaceState(null, '', url.toString());
++        return this.load('replays', <ContentReplays/>, messages);
++    }
++
+     loadGames(messages) {
+         return this.load(
+             'games',
+--- a/src/gui/pages/content_game.jsx
++++ b/src/gui/pages/content_game.jsx
+@@ -127,7 +127,7 @@
+         }
+         this.schedule_timeout_id = null;
+         this.state = {
+-            tabMain: null,
++            tabMain: this.props.initialTab || null,
+             tabPastMessages: null,
+             tabCurrentMessages: null,
+             messageHighlights: {},
+@@ -136,7 +136,7 @@
+             historyCurrentLoc: null,
+             historyCurrentOrders: null,
+             orders: orders, // {power name => {loc => {local: bool, order: str}}}
+-            power: null,
++            power: this.props.initialPower || null,
+             orderBuildingType: null,
+             orderBuildingPath: [],
+             showAbbreviations: true
+@@ -1221,13 +1221,19 @@
+         const page = this.context;
+         const engine = this.props.data;
+         const title = ContentGame.gameTitle(engine);
+-        const navigation = [
++        // Without a server channel this is a replay opened from the replays page.
++        const navigation = page.channel ? [
+             ['Help', () => page.dialog(onClose => <Help onClose={onClose}/>)],
+             ['Load a game from disk', page.loadGameFromDisk],
+             ['Save game to disk', () => saveGameToDisk(engine, page.error)],
+             [`${UTILS.html.UNICODE_SMALL_LEFT_ARROW} Games`, () => page.loadGames()],
+             [`${UTILS.html.UNICODE_SMALL_LEFT_ARROW} Leave game`, () => page.leaveGame(engine.game_id)],
+             [`${UTILS.html.UNICODE_SMALL_LEFT_ARROW} Logout`, page.logout]
++        ] : [
++            ['Help', () => page.dialog(onClose => <Help onClose={onClose}/>)],
++            ['Load a game from disk', page.loadGameFromDisk],
++            ['Save game to disk', () => saveGameToDisk(engine, page.error)],
++            [`${UTILS.html.UNICODE_SMALL_LEFT_ARROW} All replays`, () => page.loadReplays()]
+         ];
+         const phaseType = engine.getPhaseType();
+         const controllablePowers = engine.getControllablePowers();
+@@ -1343,7 +1349,7 @@
+                 </Helmet>
+                 <Navigation title={title}
+                             afterTitle={navAfterTitle}
+-                            username={page.channel.username}
++                            username={page.channel ? page.channel.username : null}
+                             navigation={navigation}/>
+                 <Tabs menu={tabNames} titles={tabTitles} onChange={this.onChangeMainTab} active={mainTab}>
+                     {/* Tab Phase history. */}
+@@ -1399,5 +1405,7 @@
+ 
+ ContentGame.contextType = PageContext;
+ ContentGame.propTypes = {
+-    data: PropTypes.instanceOf(Game).isRequired
++    data: PropTypes.instanceOf(Game).isRequired,
++    initialTab: PropTypes.string,
++    initialPower: PropTypes.string
+ };
