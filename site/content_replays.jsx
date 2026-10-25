@@ -14,7 +14,7 @@ import {ContentGame} from "./content_game";
 import {gameFromSavedData} from "../utils/saved_game";
 import "./content_replays.css";
 
-const REPO_URL = 'https://github.com/jono1762/cits3011-project';
+const REPO_URL = 'https://github.com/jono1762/diplomacy-agent';
 const GAMES_DIR = 'games';
 
 const OUTCOME_CLASSES = {WIN: 'badge-success', SURVIVE: 'badge-secondary', DEFEAT: 'badge-danger'};
