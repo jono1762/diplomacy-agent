@@ -1,0 +1,383 @@
+{
+  "seed": 3025,
+  "games": [
+    {
+      "id": "static-austria",
+      "file": "static-austria.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "AUSTRIA",
+      "agents": {
+        "AUSTRIA": "Student",
+        "ENGLAND": "Static",
+        "FRANCE": "Static",
+        "GERMANY": "Static",
+        "ITALY": "Static",
+        "RUSSIA": "Static",
+        "TURKEY": "Static"
+      },
+      "centres": {
+        "AUSTRIA": 19,
+        "ENGLAND": 3,
+        "FRANCE": 3,
+        "GERMANY": 0,
+        "ITALY": 2,
+        "RUSSIA": 0,
+        "TURKEY": 3
+      },
+      "end_year": 1908,
+      "outcome": "WIN"
+    },
+    {
+      "id": "static-england",
+      "file": "static-england.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "ENGLAND",
+      "agents": {
+        "AUSTRIA": "Static",
+        "ENGLAND": "Student",
+        "FRANCE": "Static",
+        "GERMANY": "Static",
+        "ITALY": "Static",
+        "RUSSIA": "Static",
+        "TURKEY": "Static"
+      },
+      "centres": {
+        "AUSTRIA": 3,
+        "ENGLAND": 18,
+        "FRANCE": 1,
+        "GERMANY": 1,
+        "ITALY": 2,
+        "RUSSIA": 3,
+        "TURKEY": 3
+      },
+      "end_year": 1913,
+      "outcome": "WIN"
+    },
+    {
+      "id": "static-france",
+      "file": "static-france.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "FRANCE",
+      "agents": {
+        "AUSTRIA": "Static",
+        "ENGLAND": "Static",
+        "FRANCE": "Student",
+        "GERMANY": "Static",
+        "ITALY": "Static",
+        "RUSSIA": "Static",
+        "TURKEY": "Static"
+      },
+      "centres": {
+        "AUSTRIA": 1,
+        "ENGLAND": 3,
+        "FRANCE": 20,
+        "GERMANY": 0,
+        "ITALY": 0,
+        "RUSSIA": 4,
+        "TURKEY": 3
+      },
+      "end_year": 1913,
+      "outcome": "WIN"
+    },
+    {
+      "id": "static-germany",
+      "file": "static-germany.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "GERMANY",
+      "agents": {
+        "AUSTRIA": "Static",
+        "ENGLAND": "Static",
+        "FRANCE": "Static",
+        "GERMANY": "Student",
+        "ITALY": "Static",
+        "RUSSIA": "Static",
+        "TURKEY": "Static"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 3,
+        "FRANCE": 1,
+        "GERMANY": 19,
+        "ITALY": 3,
+        "RUSSIA": 0,
+        "TURKEY": 3
+      },
+      "end_year": 1906,
+      "outcome": "WIN"
+    },
+    {
+      "id": "static-italy",
+      "file": "static-italy.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "ITALY",
+      "agents": {
+        "AUSTRIA": "Static",
+        "ENGLAND": "Static",
+        "FRANCE": "Static",
+        "GERMANY": "Static",
+        "ITALY": "Student",
+        "RUSSIA": "Static",
+        "TURKEY": "Static"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 3,
+        "FRANCE": 2,
+        "GERMANY": 1,
+        "ITALY": 18,
+        "RUSSIA": 2,
+        "TURKEY": 2
+      },
+      "end_year": 1909,
+      "outcome": "WIN"
+    },
+    {
+      "id": "static-russia",
+      "file": "static-russia.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "RUSSIA",
+      "agents": {
+        "AUSTRIA": "Static",
+        "ENGLAND": "Static",
+        "FRANCE": "Static",
+        "GERMANY": "Static",
+        "ITALY": "Static",
+        "RUSSIA": "Student",
+        "TURKEY": "Static"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 3,
+        "FRANCE": 3,
+        "GERMANY": 1,
+        "ITALY": 3,
+        "RUSSIA": 18,
+        "TURKEY": 1
+      },
+      "end_year": 1905,
+      "outcome": "WIN"
+    },
+    {
+      "id": "static-turkey",
+      "file": "static-turkey.json",
+      "scenario": "static",
+      "scenario_title": "vs Static agents",
+      "power": "TURKEY",
+      "agents": {
+        "AUSTRIA": "Static",
+        "ENGLAND": "Static",
+        "FRANCE": "Static",
+        "GERMANY": "Static",
+        "ITALY": "Static",
+        "RUSSIA": "Static",
+        "TURKEY": "Student"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 3,
+        "FRANCE": 3,
+        "GERMANY": 1,
+        "ITALY": 1,
+        "RUSSIA": 0,
+        "TURKEY": 19
+      },
+      "end_year": 1911,
+      "outcome": "WIN"
+    },
+    {
+      "id": "mixed-austria",
+      "file": "mixed-austria.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "AUSTRIA",
+      "agents": {
+        "AUSTRIA": "Student",
+        "ENGLAND": "Random",
+        "FRANCE": "Greedy",
+        "GERMANY": "Greedy",
+        "ITALY": "Attitude",
+        "RUSSIA": "Greedy",
+        "TURKEY": "Attitude"
+      },
+      "centres": {
+        "AUSTRIA": 3,
+        "ENGLAND": 0,
+        "FRANCE": 10,
+        "GERMANY": 18,
+        "ITALY": 0,
+        "RUSSIA": 1,
+        "TURKEY": 2
+      },
+      "end_year": 1908,
+      "outcome": "SURVIVE"
+    },
+    {
+      "id": "mixed-england",
+      "file": "mixed-england.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "ENGLAND",
+      "agents": {
+        "AUSTRIA": "Random",
+        "ENGLAND": "Student",
+        "FRANCE": "Random",
+        "GERMANY": "Random",
+        "ITALY": "Attitude",
+        "RUSSIA": "Attitude",
+        "TURKEY": "Greedy"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 14,
+        "FRANCE": 0,
+        "GERMANY": 1,
+        "ITALY": 1,
+        "RUSSIA": 0,
+        "TURKEY": 18
+      },
+      "end_year": 1908,
+      "outcome": "SURVIVE"
+    },
+    {
+      "id": "mixed-france",
+      "file": "mixed-france.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "FRANCE",
+      "agents": {
+        "AUSTRIA": "Random",
+        "ENGLAND": "Attitude",
+        "FRANCE": "Student",
+        "GERMANY": "Attitude",
+        "ITALY": "Random",
+        "RUSSIA": "Attitude",
+        "TURKEY": "Attitude"
+      },
+      "centres": {
+        "AUSTRIA": 6,
+        "ENGLAND": 2,
+        "FRANCE": 18,
+        "GERMANY": 1,
+        "ITALY": 0,
+        "RUSSIA": 3,
+        "TURKEY": 4
+      },
+      "end_year": 1912,
+      "outcome": "WIN"
+    },
+    {
+      "id": "mixed-germany",
+      "file": "mixed-germany.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "GERMANY",
+      "agents": {
+        "AUSTRIA": "Random",
+        "ENGLAND": "Random",
+        "FRANCE": "Greedy",
+        "GERMANY": "Student",
+        "ITALY": "Attitude",
+        "RUSSIA": "Greedy",
+        "TURKEY": "Greedy"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 0,
+        "FRANCE": 7,
+        "GERMANY": 19,
+        "ITALY": 0,
+        "RUSSIA": 0,
+        "TURKEY": 8
+      },
+      "end_year": 1914,
+      "outcome": "WIN"
+    },
+    {
+      "id": "mixed-italy",
+      "file": "mixed-italy.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "ITALY",
+      "agents": {
+        "AUSTRIA": "Random",
+        "ENGLAND": "Random",
+        "FRANCE": "Attitude",
+        "GERMANY": "Random",
+        "ITALY": "Student",
+        "RUSSIA": "Attitude",
+        "TURKEY": "Random"
+      },
+      "centres": {
+        "AUSTRIA": 0,
+        "ENGLAND": 3,
+        "FRANCE": 4,
+        "GERMANY": 0,
+        "ITALY": 19,
+        "RUSSIA": 3,
+        "TURKEY": 4
+      },
+      "end_year": 1907,
+      "outcome": "WIN"
+    },
+    {
+      "id": "mixed-russia",
+      "file": "mixed-russia.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "RUSSIA",
+      "agents": {
+        "AUSTRIA": "Greedy",
+        "ENGLAND": "Attitude",
+        "FRANCE": "Greedy",
+        "GERMANY": "Greedy",
+        "ITALY": "Attitude",
+        "RUSSIA": "Student",
+        "TURKEY": "Greedy"
+      },
+      "centres": {
+        "AUSTRIA": 4,
+        "ENGLAND": 0,
+        "FRANCE": 19,
+        "GERMANY": 0,
+        "ITALY": 0,
+        "RUSSIA": 4,
+        "TURKEY": 7
+      },
+      "end_year": 1918,
+      "outcome": "SURVIVE"
+    },
+    {
+      "id": "mixed-turkey",
+      "file": "mixed-turkey.json",
+      "scenario": "mixed",
+      "scenario_title": "vs Random, Attitude and Greedy agents",
+      "power": "TURKEY",
+      "agents": {
+        "AUSTRIA": "Greedy",
+        "ENGLAND": "Random",
+        "FRANCE": "Greedy",
+        "GERMANY": "Greedy",
+        "ITALY": "Attitude",
+        "RUSSIA": "Random",
+        "TURKEY": "Student"
+      },
+      "centres": {
+        "AUSTRIA": 1,
+        "ENGLAND": 0,
+        "FRANCE": 12,
+        "GERMANY": 8,
+        "ITALY": 0,
+        "RUSSIA": 0,
+        "TURKEY": 13
+      },
+      "end_year": 1920,
+      "outcome": "SURVIVE"
+    }
+  ]
+}
